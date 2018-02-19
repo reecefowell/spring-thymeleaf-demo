@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="base :: header">
+    </head>
+    <body>
+        <div class="container">
+            <h1 th:text="#{tasks.title}">Todo List App</h1>
+
+            <table class="table table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th th:text="#{tasks.name}">Task</th>
+                        <th th:text="#{tasks.description}">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="task : ${tasks}">
+                        <td th:text="${task.name}">Task</td>
+                        <td th:text="${task.description}">Description</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div th:replace="base :: footer"></div>
+        </div>
+    </body>
+</html>
