@@ -6,6 +6,14 @@
         <div class="container">
             <h1 th:text="#{tasks.title}">Todo List App</h1>
 
+            <form method="get">
+                <select name="lang">
+                    <option value="en_GB" th:selected="__${#locale}__ == 'en_GB'">English</option>
+                    <option value="fr_FR" th:selected="__${#locale}__ == 'fr_FR'">Francais</option>
+                </select>
+                <button type="submit" class="btn btn-primary"><i class="fa fa-globe"></i></button>
+            </form>
+
             <table class="table table-striped">
                 <thead class="thead-dark">
                     <tr>
