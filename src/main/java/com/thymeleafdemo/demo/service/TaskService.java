@@ -24,4 +24,9 @@ public class TaskService {
     public List<Task> getTaskList() {
         return new ArrayList<Task>(taskMap.values());
     }
+
+    public void addTask(Task task) {
+        task.setId(UUID.randomUUID());
+        taskMap.put(task.getId(), task);
+    }
 }
