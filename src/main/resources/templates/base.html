@@ -12,13 +12,16 @@
               th:href="@{/webjars/font-awesome/4.7.0/css/font-awesome.min.css}"
               rel="stylesheet" />
 
+        <link href="../static/css/styles.css"
+              th:href="@{/css/styles.css}" rel="stylesheet" media="screen" />
+
         <script src="http://cdn.jsdelivr.net/webjars/jquery/3.2.1/jquery.min.js"
                 th:src="@{/webjars/jquery/3.2.1/jquery.min.js}"></script>
 
     </head>
 
     <body>
-        <p th:fragment="footer">
+        <p th:fragment="footer" class="footer">
             Copyright &copy; Reece Fowell
         </p>
     </body>
