@@ -29,4 +29,8 @@ public class TaskService {
         task.setId(UUID.randomUUID());
         taskMap.put(task.getId(), task);
     }
+
+    public void deleteTask(UUID id) {
+        taskMap.remove(id);
+    }
 }

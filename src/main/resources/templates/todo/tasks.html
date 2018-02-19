@@ -19,12 +19,18 @@
                     <tr>
                         <th th:text="#{tasks.name}">Task</th>
                         <th th:text="#{tasks.description}">Description</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr th:each="task : ${tasks}">
                         <td th:text="${task.name}">Task</td>
                         <td th:text="${task.description}">Description</td>
+                        <td>
+                            <form method="post" action="#" th:action="@{'/todo/tasks/' + ${task.id} + '/delete'}" >
+                                <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i></button>
+                            </form>
+                        </td>
                     </tr>
                 </tbody>
             </table>
