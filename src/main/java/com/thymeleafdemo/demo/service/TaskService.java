@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class TaskService {
-    private Map<UUID, Task> taskMap = new HashMap<UUID, Task>();
+    private Map<UUID, Task> taskMap = new HashMap<>();
 
     @PostConstruct
     public void init() {
@@ -22,7 +22,7 @@ public class TaskService {
     }
 
     public List<Task> getTaskList() {
-        return new ArrayList<Task>(taskMap.values());
+        return new ArrayList<>(taskMap.values());
     }
 
     public void addTask(Task task) {
