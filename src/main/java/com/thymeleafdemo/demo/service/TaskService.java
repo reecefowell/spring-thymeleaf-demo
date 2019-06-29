@@ -15,10 +15,10 @@ public class TaskService {
 
     @PostConstruct
     public void init() {
-        addTask(new Task().setName("Visit the bank").setDescription("Need to get some statements"));
-        addTask(new Task().setName("Pick up bread").setDescription(""));
-        addTask(new Task().setName("Book flight tickets").setDescription("Book flights and make hotel reservations"));
-        addTask(new Task().setName("Shop around for insurance quote"));
+        addTask(new Task("Visit the bank", "Need to get some statements"));
+        addTask(new Task("Pick up bread", ""));
+        addTask(new Task("Book flight tickets", "Book flights and make hotel reservations"));
+        addTask(new Task("Shop around for insurance quote"));
     }
 
     public List<Task> getTaskList() {
