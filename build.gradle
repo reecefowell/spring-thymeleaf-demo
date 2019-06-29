@@ -1,5 +1,5 @@
 plugins {
-    id 'org.springframework.boot' version '1.5.21.RELEASE'
+    id 'org.springframework.boot' version '2.1.6.RELEASE'
     id 'java'
 }
 
@@ -16,6 +16,8 @@ repositories {
 
 dependencies {
     runtime('org.springframework.boot:spring-boot-devtools')
+    runtime("org.springframework.boot:spring-boot-properties-migrator")
+    compile('org.springframework.boot:spring-boot-starter-web')
     compile('org.springframework.boot:spring-boot-starter-thymeleaf')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 
